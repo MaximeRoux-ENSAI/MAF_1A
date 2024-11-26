@@ -1,0 +1,33 @@
+---
+title: "TP2"
+author: "Maxime ROUX"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Chargement des données
+
+On charge les données
+
+```{install.packages(tidyverse)}
+library(tidyverse)
+donnees_eco_par_pays <- read.table("https://marieetienne.github.io/datasets/overshootday_overview.csv", 
+                                   sep = ",", 
+                                   header = TRUE, 
+                                   encoding = "UTF-8", 
+                                   row.name = 1)
+head(donnees_eco_par_pays)
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
